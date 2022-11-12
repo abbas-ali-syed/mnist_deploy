@@ -1,0 +1,29 @@
+
+
+{% block content%}
+
+    <h2><b>Upload your image in jpg format</b></h2>
+
+    
+    <br>
+
+   
+    <form method="post" enctype="multipart/form-data" action="predictImage">
+       
+ {% csrf_token %}
+ <div class="col-md-4 col-sm-4" background-color: #1e5e9a;><label for="fname"><b>Upload Image File Here:</b></label> </div> <input name="filePath" type="file"><br><br>
+ 
+ <br>
+
+ 
+ <input type="submit" value="Submit" STYLE="color: #76a964; font-family: Verdana; font-weight: bold; font-size: 12px; background-color: #1e5e9a;" size="10" maxlength="30"> ></div>
+
+ <h2>The number in image is {{Predictions}}</h2>
+ <img src={{filePathName}} alt='imagename'>
+ {{filePathName}}
+
+</form>
+<br>
+
+
+{% endblock %}
